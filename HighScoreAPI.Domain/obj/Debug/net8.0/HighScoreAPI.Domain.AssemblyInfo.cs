@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HighScoreAPI.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f031ccc104f0f2c885bd7d8daa3f857b57e00c71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee961b36d5be5f1250a42cf6a0f2cf2f13158b22")]
 [assembly: System.Reflection.AssemblyProductAttribute("HighScoreAPI.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HighScoreAPI.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
