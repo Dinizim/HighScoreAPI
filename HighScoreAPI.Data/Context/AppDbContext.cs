@@ -1,5 +1,6 @@
 ﻿using HighScoreAPI.Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 namespace HighScoreAPI.Data.Context;
 public class AppDbContext : DbContext
 {
+
     public DbSet<Player> Players { get; set; }
     public DbSet<highscore> HighScores { get; set; }
     public DbSet<Game> Games { get; set; }

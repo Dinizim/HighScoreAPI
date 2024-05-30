@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScoreAPI.Domain", "High
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScoreAPI.Data", "HighScoreAPI.Data\HighScoreAPI.Data.csproj", "{11CA41B4-E717-4BF5-84DD-78C28A0980A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScoreAPI.WEBAPI", "HighScoreAPI.WEBAPI\HighScoreAPI.WEBAPI.csproj", "{50673B00-F45C-4847-A494-EAAF42EEC996}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScoreAPI.Application", "HighScoreAPI.Application\HighScoreAPI.Application.csproj", "{C2375125-C446-4674-A870-069627771BB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{11CA41B4-E717-4BF5-84DD-78C28A0980A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11CA41B4-E717-4BF5-84DD-78C28A0980A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11CA41B4-E717-4BF5-84DD-78C28A0980A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50673B00-F45C-4847-A494-EAAF42EEC996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50673B00-F45C-4847-A494-EAAF42EEC996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50673B00-F45C-4847-A494-EAAF42EEC996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50673B00-F45C-4847-A494-EAAF42EEC996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2375125-C446-4674-A870-069627771BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2375125-C446-4674-A870-069627771BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2375125-C446-4674-A870-069627771BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2375125-C446-4674-A870-069627771BB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

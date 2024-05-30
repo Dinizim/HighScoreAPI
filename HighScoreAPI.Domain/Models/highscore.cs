@@ -20,4 +20,4 @@ public class highscore : IModelBase
     public int GameId { get; set; }
     public Game Game { get; set; }
 }
-}
+

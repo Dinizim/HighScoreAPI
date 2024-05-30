@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\HighScoreAPI.WEBAPI.props" />
+</Project>
