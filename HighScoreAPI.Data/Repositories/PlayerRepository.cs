@@ -15,7 +15,7 @@ namespace HighScoreAPI.Data.Repositories
         private readonly AppDbContext _context;
    
 
-        public PlayerRepository(AppDbContext context, ILogger<PlayerRepository> logger)
+        public PlayerRepository(AppDbContext context)
         {
             _context = context;
         }
