@@ -38,7 +38,7 @@ public class GameRepository : IGameRepository
             if (game == null)
             {
 
-                throw new KeyNotFoundException($"Player with id {id} not found");
+                throw new KeyNotFoundException($"Entity with id {id} not found"); ;
             }
             return game;
         }
@@ -69,7 +69,7 @@ public class GameRepository : IGameRepository
             if (existingGame == null)
             {
 
-                throw new KeyNotFoundException($"Player with id {game.Id} not found");
+                throw new KeyNotFoundException($"Entity with id {game.Id} not found");
             }
 
             _context.Entry(existingGame).CurrentValues.SetValues(game);
@@ -88,7 +88,7 @@ public class GameRepository : IGameRepository
             var game = await _context.Games.FindAsync(id);
             if (game == null)
             {
-                throw new KeyNotFoundException($"Player with id {id} not found");
+                throw new KeyNotFoundException($"Entity with id {id} not found");
             }
 
             _context.Games.Remove(game);

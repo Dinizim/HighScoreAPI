@@ -40,7 +40,7 @@ namespace HighScoreAPI.Data.Repositories
                 if (player == null)
                 {
                     
-                    throw new KeyNotFoundException($"Player with id {id} not found");
+                    throw new KeyNotFoundException($"Entity with id {id} not found");
                 }
                 return player;
             }
@@ -71,7 +71,7 @@ namespace HighScoreAPI.Data.Repositories
                 if (existingPlayer == null)
                 {
 
-                    throw new KeyNotFoundException($"Player with id {player.Id} not found");
+                    throw new KeyNotFoundException($"Entity with id {player.Id} not found");
                 }
 
                 _context.Entry(existingPlayer).CurrentValues.SetValues(player);
@@ -90,7 +90,7 @@ namespace HighScoreAPI.Data.Repositories
                 var player = await _context.Players.FindAsync(id);
                 if (player == null)
                 {
-                    throw new KeyNotFoundException($"Player with id {id} not found");
+                    throw new KeyNotFoundException($"Entity with id {id} not found");
                 }
 
                 _context.Players.Remove(player);
