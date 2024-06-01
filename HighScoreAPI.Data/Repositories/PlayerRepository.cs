@@ -2,57 +2,104 @@
 using HighScoreAPI.Data.Interfaces;
 using HighScoreAPI.Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace HighScoreAPI.Data.Repositories;
-public class PlayerRepository : IPlayerRepository
+namespace HighScoreAPI.Data.Repositories
 {
-    private readonly AppDbContext _context;
-    public PlayerRepository(AppDbContext context)
+    public class PlayerRepository : IPlayerRepository
     {
-        _context = context;
-    }
-    
-    public async Task<IEnumerable<Player>> GetAllAsync()
-    {
-        return await _context
-            .Players
-            .AsNoTracking()
-            .ToArrayAsync();
-    }
-    public async Task<Player> GetByIdAsync(int id)
-    {
-        return await _context
-            .Players
-            .AsNoTracking()
-            .FirstOrDefaultAsync(x => x.Id == id);
-    }
-    public async Task AddAsync(Player player)
-    {
-        await _context.Players.AddAsync(player);
-        await _context.SaveChangesAsync();
-    }
-    public async Task UpdateAsync(Player player)
-    {
-        var existingPlayer = await _context.Players.FindAsync(player.Id);
-        if (existingPlayer != null)
-        {
-            _context.Entry(existingPlayer).CurrentValues.SetValues(player);
-            await _context.SaveChangesAsync();
-        }
-       
-    }
-    public async Task DeleteAsync(int id)
-    {
-        var player = await _context.Players.FindAsync(id);
+        private readonly AppDbContext _context;
+   
 
-       if (player != null) {
-            _context.Players.Remove(player);
-            await _context.SaveChangesAsync();
+        public PlayerRepository(AppDbContext context, ILogger<PlayerRepository> logger)
+        {
+            _context = context;
+        }
+
+        public async Task<IEnumerable<Player>> GetAllAsync()
+        {
+            try
+            {
+                return await _context.Players.AsNoTracking().ToArrayAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while accessing the database", ex);
+            }
+        }
+
+        public async Task<Player> GetByIdAsync(int id)
+        {
+            try
+            {
+                var player = await _context.Players.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+                if (player == null)
+                {
+                    
+                    throw new KeyNotFoundException($"Player with id {id} not found");
+                }
+                return player;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while accessing the database", ex);
+            }
+        }
+
+        public async Task AddAsync(Player player)
+        {
+            try
+            {
+                await _context.Players.AddAsync(player);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while accessing the database", ex);
+            }
+        }
+
+        public async Task UpdateAsync(Player player)
+        {
+            try
+            {
+                var existingPlayer = await _context.Players.FindAsync(player.Id);
+                if (existingPlayer == null)
+                {
+
+                    throw new KeyNotFoundException($"Player with id {player.Id} not found");
+                }
+
+                _context.Entry(existingPlayer).CurrentValues.SetValues(player);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while accessing the database", ex);
+            }
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            try
+            {
+                var player = await _context.Players.FindAsync(id);
+                if (player == null)
+                {
+                    throw new KeyNotFoundException($"Player with id {id} not found");
+                }
+
+                _context.Players.Remove(player);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while accessing the database", ex);
+            }
         }
     }
 }
