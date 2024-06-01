@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\buildMultiTargeting\HighScoreAPI.WEBAPI.props" />
+  <Import Project="../buildMultiTargeting/HighScoreAPI.WEBAPI.props" />
 </Project>
