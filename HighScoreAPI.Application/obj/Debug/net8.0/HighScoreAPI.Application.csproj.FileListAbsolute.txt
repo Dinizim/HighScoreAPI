@@ -8,7 +8,6 @@ C:/Dev/HighScoreAPI/HighScoreAPI.Application/obj/Debug/net8.0/HighScoreAPI.Appli
 C:/Dev/HighScoreAPI/HighScoreAPI.Application/obj/Debug/net8.0/HighScoreAPI.Application.AssemblyInfoInputs.cache
 C:/Dev/HighScoreAPI/HighScoreAPI.Application/obj/Debug/net8.0/HighScoreAPI.Application.AssemblyInfo.cs
 C:/Dev/HighScoreAPI/HighScoreAPI.Application/obj/Debug/net8.0/HighScoreAPI.Application.csproj.CoreCompileInputs.cache
-C:/Dev/HighScoreAPI/HighScoreAPI.Application/obj/Debug/net8.0/HighScoreAPI.Application.csproj.CopyComplete
 C:/Dev/HighScoreAPI/HighScoreAPI.Application/obj/Debug/net8.0/HighScoreAPI.Application.dll
 C:/Dev/HighScoreAPI/HighScoreAPI.Application/obj/Debug/net8.0/refint/HighScoreAPI.Application.dll
 C:/Dev/HighScoreAPI/HighScoreAPI.Application/obj/Debug/net8.0/HighScoreAPI.Application.pdb
@@ -40,8 +39,8 @@ C:\Dev\HighScoreAPI\HighScoreAPI.Application\obj\Debug\net8.0\HighScoreAPI.Appli
 C:\Dev\HighScoreAPI\HighScoreAPI.Application\obj\Debug\net8.0\HighScoreAPI.Application.AssemblyInfo.cs
 C:\Dev\HighScoreAPI\HighScoreAPI.Application\obj\Debug\net8.0\HighScoreAPI.Application.csproj.CoreCompileInputs.cache
 C:\Dev\HighScoreAPI\HighScoreAPI.Application\obj\Debug\net8.0\HighScoreAPI.Application.sourcelink.json
-C:\Dev\HighScoreAPI\HighScoreAPI.Application\obj\Debug\net8.0\HighScoreAPI.Application.csproj.CopyComplete
 C:\Dev\HighScoreAPI\HighScoreAPI.Application\obj\Debug\net8.0\HighScoreAPI.Application.dll
 C:\Dev\HighScoreAPI\HighScoreAPI.Application\obj\Debug\net8.0\refint\HighScoreAPI.Application.dll
 C:\Dev\HighScoreAPI\HighScoreAPI.Application\obj\Debug\net8.0\HighScoreAPI.Application.pdb
 C:\Dev\HighScoreAPI\HighScoreAPI.Application\obj\Debug\net8.0\ref\HighScoreAPI.Application.dll
+C:\Dev\HighScoreAPI\HighScoreAPI.Application\obj\Debug\net8.0\HighScor.12014286.Up2Date
