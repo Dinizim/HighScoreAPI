@@ -1,23 +1,21 @@
 # Documentação do Projeto [Nome do Projeto]
 
----
+## Introdução
 
-## 1. Introdução
-### 1.1 Visão Geral
-### 1.2 Objetivo da Documentação
-### 1.3 Estrutura do Documento
+1. Visão Geral
+2. Objetivo da Documentação
+3. Estrutura do Documento
 
----
+## Arquitetura do Projeto
 
-## 2. Arquitetura do Projeto
-### 2.1 Descrição da Arquitetura
-### 2.2 Diagrama de Arquitetura
+1. Descrição da Arquitetura
+2. Diagrama de Arquitetura
 
----
+## Camada Domain
 
-## 3. Camada Domain
-### 3.1 Descrição Geral
-### 3.2 Classes de Validações
+1. Descrição Geral
+2. Classes de Validações (RASCUNHO)
+   
 Tarefa: Implementar Validação com Notificações na Camada Domain
 Descrição Geral:
 
@@ -69,43 +67,43 @@ Resultados Esperados:
     Um sistema de validação que utiliza notificações para reportar erros e eventos indesejados na camada Domain.
     As entidades Customer e Order possuem métodos Validate que utilizam classes de validação específicas.
     Notificações são gerenciadas de forma centralizada pela classe ContractValidation.
-#### 3.2.1 [Nome da Classe de Validação]
-### 3.3 Entidades
-#### 3.3.1 [Nome da Entidade]
+3. Entidades
+   1. [Nome da Entidade]
 
----
+## Camada Application
 
-## 4. Camada Application
-### 4.1 Descrição Geral
-### 4.2 Validações de Entradas
-#### 4.2.1 [Nome da Classe de Validação de Entrada]
-### 4.3 Serviços
-#### 4.3.1 [Nome do Serviço]
+1. Descrição Geral
+2. Validações de Entradas
+   1. [Nome da Classe de Validação de Entrada]
+3. Serviços
+   1. [Nome do Serviço]
 
----
+## Camada Data/Infrastructure
 
-## 5. Camada Data/Infrastructure
-### 5.1 Descrição Geral
-### 5.2 Contexto de Dados
-#### 5.2.1 [Nome do Contexto de Dados]
-### 5.3 Acesso a Dados
-#### 5.3.1 [Nome do Repositório]
+1. Descrição Geral
+2. Conexão com o Banco de Dados
+   1. Configuração da String de Conexão
+   2. Configuração da Autenticação (usuário API)
+3. Contexto de Dados
+   1. [Nome do Contexto de Dados]
+4. Acesso a Dados
+   1. [Nome do Repositório]
+5. Schemas do Banco de Dados
+   1. Estrutura das Tabelas
+   2. Relacionamentos
+   3. Exemplos de Consultas
 
----
+## Integrações e Dependências Externas
 
-## 6. Integrações e Dependências Externas
-### 6.1 Integrações
-### 6.2 Dependências
+1. Integrações
+2. Dependências
 
----
+## Padrões e Boas Práticas
 
-## 7. Padrões e Boas Práticas
-### 7.1 Padrões de Design
-### 7.2 Boas Práticas
+1. Padrões de Design
+2. Boas Práticas
 
----
+## Conclusão
 
-## 8. Conclusão
-### 8.1 Resumo
-### 8.2 Referências
-
+1. Resumo
+2. Referências
