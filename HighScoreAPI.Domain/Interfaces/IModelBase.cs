@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HighScoreAPI.Domain.Validation.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,4 +9,6 @@ namespace HighScoreAPI.Domain.Repositories;
 public interface IModelBase
 {
     public int Id { get; }
+
+    public abstract bool Validation();
 }

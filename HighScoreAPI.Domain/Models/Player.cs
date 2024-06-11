@@ -6,6 +6,7 @@ namespace HighScoreAPI.Domain.Models;
 
 public class Player : IModelBase
 {
+
     public int Id => Player_Id;
     [Key]
     public int Player_Id { get; set; }
@@ -15,4 +16,9 @@ public class Player : IModelBase
 
     [JsonIgnore]
     public ICollection<highscore> HighScores { get; set; }
+
+    public bool Validation()
+    {
+        throw new NotImplementedException();
+    }
 }

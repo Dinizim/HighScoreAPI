@@ -18,4 +18,9 @@ public class Game : IModelBase
 
     [JsonIgnore]
     public ICollection<highscore> HighScores { get; set; }
+
+    public bool Validation()
+    {
+        throw new NotImplementedException();
+    }
 }
