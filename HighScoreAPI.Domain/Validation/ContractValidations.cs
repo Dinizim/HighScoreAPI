@@ -13,7 +13,7 @@ public partial class ContractValidations<T> where T : IContract
 {
     private List<Notification> _notifications;
 
-    public ContractValidations(List<Notification> notifications)
+    public ContractValidations()
     {
         _notifications = new List<Notification>();
     }

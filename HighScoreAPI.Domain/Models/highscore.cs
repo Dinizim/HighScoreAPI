@@ -1,9 +1,11 @@
 ﻿using HighScoreAPI.Domain.Repositories;
+using HighScoreAPI.Domain.Validation;
+using HighScoreAPI.Domain.Validation.Interfaces;
 
 
 namespace HighScoreAPI.Domain.Models;
 
-public class highscore : IModelBase
+public class highscore : BaseEntity , IContract
 {
   
 
@@ -19,9 +21,13 @@ public class highscore : IModelBase
     public int GameId { get; set; }
     public Game Game { get; set; }
 
-    public bool Validation()
+    public override bool Validation()
     {
-        throw new NotImplementedException();
+        var contract = new ContractValidations<highscore>()
+            .ScoreNoTNegativeOK(Score, "The score cannot be negative. Please Enter a valid score", "Score")
+            .ScoreRelationshipIsValidOK(Score, "Not Implemented", "--------");
+
+        return contract.IsValid();
     }
 }
 

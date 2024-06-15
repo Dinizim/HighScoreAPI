@@ -1,4 +1,6 @@
 ﻿using HighScoreAPI.Domain.Repositories;
+using HighScoreAPI.Domain.Validation;
+using HighScoreAPI.Domain.Validation.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +10,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace HighScoreAPI.Domain.Models;
-public class Game : IModelBase
+public class Game : BaseEntity, IContract
 {
     public int Id => Game_Id;
     [Key]
@@ -19,8 +21,12 @@ public class Game : IModelBase
     [JsonIgnore]
     public ICollection<highscore> HighScores { get; set; }
 
-    public bool Validation()
+    public override bool Validation()
     {
-        throw new NotImplementedException();
+        var contract = new ContractValidations<Game>()
+            .NameIsUniqueOK(this.Name, 20, "The name must be unique. Please enter a different name", "Name")
+            .NameNotEmptyOK(this.Name, 20 , "The name exceeds the maximum allowed length. Please enter a shorter name", "Name");
+
+        return contract.IsValid();
     }
 }

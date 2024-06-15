@@ -16,4 +16,9 @@ public partial class ContractValidations<T>
 
         return this;
     }
+    
+    public ContractValidations<T> NameIsUniqueOK(string name, short maxlenght, string message, string propertyName)
+    {
+        throw new NotImplementedException();
+    }
 }
