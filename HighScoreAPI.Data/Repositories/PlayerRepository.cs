@@ -101,5 +101,30 @@ namespace HighScoreAPI.Data.Repositories
                 throw new Exception("An error occurred while accessing the database", ex);
             }
         }
+
+        public async Task<long> CountAsync()
+        {
+            try
+            {
+                var PlayerCount = await _context.Players.LongCountAsync();
+
+                return PlayerCount;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while accessing the database", ex);
+            }
+        }
+
+        public async Task<Player> Exists(int id)
+        {
+            var player = await _context.Players.FindAsync(id);
+            if (player == null)
+            {
+                throw new KeyNotFoundException($"Entity with id {id} not found");
+            }
+
+            return player;
+        }
     }
 }

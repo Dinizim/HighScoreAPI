@@ -99,4 +99,29 @@ public class GameRepository : IGameRepository
             throw new Exception("An error occurred while accessing the database", ex);
         }
     }
+    public async Task<long> CountAsync()
+    {
+        try
+        {
+            var GameCount = await _context.Games.LongCountAsync();
+
+            return GameCount;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("An error occurred while accessing the database", ex);
+        }
+    }
+
+    public async Task<Game> Exists(int id)
+    {
+        var game = await _context.Games.FindAsync(id);
+        if (game == null)
+        {
+            throw new KeyNotFoundException($"Entity with id {id} not found");
+        }
+
+        return game;
+    }
+
 }

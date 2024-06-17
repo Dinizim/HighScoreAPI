@@ -111,4 +111,29 @@ public class HighScoreRepository : IHighScoreRepository
             throw new Exception("An error occurred while accessing the database", ex);
         }
     }
+
+    public async Task<long> CountAsync()
+    {
+        try
+        {
+            var ScoreCount = await _context.HighScores.LongCountAsync();
+
+            return ScoreCount;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("An error occurred while accessing the database", ex);
+        }
+    }
+
+    public async Task<highscore> Exists(int id)
+    {
+        var highscore = await _context.HighScores.FindAsync(id);
+        if (highscore == null)
+        {
+            throw new KeyNotFoundException($"Entity with id {id} not found");
+        }
+
+        return highscore;
+    }
 }
