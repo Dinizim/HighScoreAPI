@@ -1,6 +1,7 @@
 ﻿using HighScoreAPI.Data.Context;
 using HighScoreAPI.Data.Interfaces;
 using HighScoreAPI.Domain.Models;
+using HighScoreAPI.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -126,14 +127,15 @@ public class HighScoreRepository : IHighScoreRepository
         }
     }
 
-    public async Task<highscore> Exists(int id)
+    public async Task<bool> ExistsAsync(int id)
     {
         var highscore = await _context.HighScores.FindAsync(id);
         if (highscore == null)
         {
-            throw new KeyNotFoundException($"Entity with id {id} not found");
+            return false;
         }
 
-        return highscore;
+        return true;
     }
 }
+

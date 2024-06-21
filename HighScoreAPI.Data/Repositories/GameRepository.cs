@@ -113,15 +113,15 @@ public class GameRepository : IGameRepository
         }
     }
 
-    public async Task<Game> Exists(int id)
+    public async Task<bool> ExistsAsync(int id)
     {
         var game = await _context.Games.FindAsync(id);
         if (game == null)
         {
-            throw new KeyNotFoundException($"Entity with id {id} not found");
+            return false;
         }
 
-        return game;
+        return true;
     }
 
 }

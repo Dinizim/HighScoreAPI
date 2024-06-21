@@ -17,6 +17,9 @@ public class Game : BaseEntity, IContract
     public int Game_Id { get; set; }
     public string Name { get; set; }
     public string Type { get; set; }
+    public DateTime CreatedAt { get;} =  DateTime.UtcNow;
+    public string Developer { get; set; }
+
 
     [JsonIgnore]
     public ICollection<highscore> HighScores { get; set; }
@@ -25,7 +28,8 @@ public class Game : BaseEntity, IContract
     {
         var contract = new ContractValidations<Game>()
             .NameIsUniqueOK(this.Name, 20, "The name must be unique. Please enter a different name", "Name")
-            .NameNotEmptyOK(this.Name, 20 , "The name exceeds the maximum allowed length. Please enter a shorter name", "Name");
+            .NameNotEmptyOK(this.Name, 20 , "The name exceeds the maximum allowed length. Please enter a shorter name", "Name")
+            .NameNotEmptyOK(this.Developer, 20, "The name exceeds the maximum allowed length. Please enter a shorter name", "Developer");
 
         return contract.IsValid();
     }

@@ -12,10 +12,10 @@ public class highscore : BaseEntity , IContract
     public int Id => HighScoreId;
     public int HighScoreId { get; set; }
     public double Score { get; set; }
-    public DateTime BreakingScore { get; set; } = DateTime.UtcNow;
+    public DateTime BreakingScore { get;} = DateTime.UtcNow;
 
-    public int PlayerId { get; set; }
-    public Player Player { get; set; }
+    public int PlayerId { get; private set; }
+    public Player Player { get; private set; }
 
 
     public int GameId { get; set; }

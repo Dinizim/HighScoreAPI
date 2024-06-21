@@ -116,15 +116,15 @@ namespace HighScoreAPI.Data.Repositories
             }
         }
 
-        public async Task<Player> Exists(int id)
+        public async Task<bool> ExistsAsync(int id)
         {
             var player = await _context.Players.FindAsync(id);
             if (player == null)
             {
-                throw new KeyNotFoundException($"Entity with id {id} not found");
+                return false;
             }
 
-            return player;
+            return true;
         }
     }
 }
