@@ -24,8 +24,7 @@ public class highscore : BaseEntity , IContract
     public override bool Validation()
     {
         var contract = new ContractValidations<highscore>()
-            .ScoreNoTNegativeOK(Score, "The score cannot be negative. Please Enter a valid score", "Score")
-            .ScoreRelationshipIsValidOK(Score, "Not Implemented", "--------");
+            .ScoreNoTNegativeOK(Score, "The score cannot be negative. Please Enter a valid score", "Score");
 
         return contract.IsValid();
     }

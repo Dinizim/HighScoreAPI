@@ -12,10 +12,7 @@ public class Player : BaseEntity, IContract
 
     [Key]
     public int Player_Id { get; set; }
-
     public string Username { get; set; }
-    private string Login { get; set; } = null;
-    private string Password { get; set; } = null;
 
     [JsonIgnore]
     public ICollection<highscore> HighScores { get; set; }

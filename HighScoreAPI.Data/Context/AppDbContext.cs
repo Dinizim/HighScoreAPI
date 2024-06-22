@@ -1,4 +1,5 @@
 ﻿using HighScoreAPI.Domain.Models;
+using HighScoreAPI.Domain.Validation.notification;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -21,6 +22,7 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Ignore<Notification>();
 
         modelBuilder.Entity<highscore>()
             .HasOne(hs => hs.Player)
