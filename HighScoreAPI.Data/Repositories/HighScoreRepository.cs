@@ -137,5 +137,38 @@ public class HighScoreRepository : IHighScoreRepository
 
         return true;
     }
+
+    public async Task<IEnumerable<highscore>> GetTopHighScoreByGameAsync(int gameId)
+    {
+        try
+        {
+            return await _context
+                .HighScores
+                .OrderByDescending(x => x.Score)
+                .Where(x => x.GameId == gameId)
+                .Take(20)
+                .ToListAsync();
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("An error occurred while accessing the database", ex);
+        }
+    }
+
+    public async Task<highscore> GetHighscoreByPlayerToGameAsync(int gameId, int playerId)
+    {
+        try
+        {
+            return await _context
+                .HighScores
+                .OrderByDescending(x => x.Score)
+                .Where(x => x.GameId == gameId && x.PlayerId == playerId)
+                .FirstOrDefaultAsync(); 
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("An error occurred while accessing the database", ex);
+        }
+    }
 }
 

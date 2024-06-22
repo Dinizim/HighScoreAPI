@@ -3,21 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScoreAPI.Domain", "HighScoreAPI.Domain\HighScoreAPI.Domain.csproj", "{37D17F1C-C12F-4883-932D-FC88B4F7D3B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighScoreAPI.Domain", "HighScoreAPI.Domain\HighScoreAPI.Domain.csproj", "{37D17F1C-C12F-4883-932D-FC88B4F7D3B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScoreAPI.Data", "HighScoreAPI.Data\HighScoreAPI.Data.csproj", "{11CA41B4-E717-4BF5-84DD-78C28A0980A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighScoreAPI.Data", "HighScoreAPI.Data\HighScoreAPI.Data.csproj", "{11CA41B4-E717-4BF5-84DD-78C28A0980A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScoreAPI.WEBAPI", "HighScoreAPI.WEBAPI\HighScoreAPI.WEBAPI.csproj", "{50673B00-F45C-4847-A494-EAAF42EEC996}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighScoreAPI.WEBAPI", "HighScoreAPI.WEBAPI\HighScoreAPI.WEBAPI.csproj", "{50673B00-F45C-4847-A494-EAAF42EEC996}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScoreAPI.Application", "HighScoreAPI.Application\HighScoreAPI.Application.csproj", "{C2375125-C446-4674-A870-069627771BB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighScoreAPI.Application", "HighScoreAPI.Application\HighScoreAPI.Application.csproj", "{C2375125-C446-4674-A870-069627771BB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{05DB94E3-2DA4-4550-AE7F-184BEEBF75D1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{37D17F1C-C12F-4883-932D-FC88B4F7D3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -36,5 +38,8 @@ Global
 		{C2375125-C446-4674-A870-069627771BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2375125-C446-4674-A870-069627771BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2375125-C446-4674-A870-069627771BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
