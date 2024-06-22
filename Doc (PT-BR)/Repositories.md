@@ -54,3 +54,74 @@ namespace HighScoreAPI.Domain.Repositories
 
 - **ExistsAsync(int id):**
   Verifica se uma entidade existe pelo seu ID. Esta operação é assíncrona e retorna verdadeiro se a entidade com o ID fornecido existir, caso contrário, retorna falso.
+
+<hr>
+
+### Exemplo de Implementação: IHighScoreRepository
+
+O repositório `IHighScoreRepository` estende a interface genérica para a entidade `HighScore`, adicionando métodos específicos para pontuações altas.
+
+```csharp
+public interface IHighScoreRepository : IGenericRepository<HighScore>
+{
+    Task<IEnumerable<HighScore>> GetTopHighScoreByGameAsync(int gameId);
+
+    Task<HighScore> GetHighscoreByPlayerToGameAsync(int gameId, int playerId);
+}
+```
+
+
+### Propósito do `IHighScoreRepository`
+
+Gerenciar operações relacionadas às pontuações altas no contexto do jogo.
+
+<hr>
+
+### Implementação Concreta: `HighScoreRepository`
+
+Aqui está a implementação concreta do `IHighScoreRepository`, utilizando Entity Framework Core para acesso aos dados:
+
+```csharp
+public class HighScoreRepository : IHighScoreRepository
+{
+    private readonly AppDbContext _context;
+
+    public HighScoreRepository(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    public async Task<IEnumerable<HighScore>> GetTopHighScoreByGameAsync(int gameId)
+    {
+        try
+        {
+            return await _context.HighScores
+                .OrderByDescending(x => x.Score)
+                .Where(x => x.GameId == gameId)
+                .Take(20)
+                .ToListAsync();
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("An error occurred while accessing the database", ex);
+        }
+    }
+
+    public async Task<HighScore> GetHighscoreByPlayerToGameAsync(int gameId, int playerId)
+    {
+        try
+        {
+            return await _context.HighScores
+                .OrderByDescending(x => x.Score)
+                .FirstOrDefaultAsync(x => x.GameId == gameId && x.PlayerId == playerId);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("An error occurred while accessing the database", ex);
+        }
+    }
+}
+```
+### Propósito da `Implementação`
+
+Gerenciar consultas e modificações nas pontuações altas dos jogadores em diferentes jogos.
