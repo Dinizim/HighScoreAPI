@@ -14,8 +14,8 @@ public class highscore : BaseEntity , IContract
     public double Score { get; set; }
     public DateTime BreakingScore { get;} = DateTime.UtcNow;
 
-    public int PlayerId { get; private set; }
-    public Player Player { get; private set; }
+    public int PlayerId { get;  set; }
+    public Player Player { get;  set; }
 
 
     public int GameId { get; set; }

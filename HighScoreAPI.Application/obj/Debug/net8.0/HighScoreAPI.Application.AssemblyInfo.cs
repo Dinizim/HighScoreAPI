@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HighScoreAPI.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8052643f4657cf1ba17af122384cb189acfa497")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22d1196c1e4dce252fa8ee853c2840a9ccd06928")]
 [assembly: System.Reflection.AssemblyProductAttribute("HighScoreAPI.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HighScoreAPI.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
