@@ -27,9 +27,8 @@ public class Game : BaseEntity, IContract
     public override bool Validation()
     {
         var contract = new ContractValidations<Game>()
-            .NameIsUniqueOK(this.Name, 20, "The name must be unique. Please enter a different name", "Name")
-            .NameNotEmptyOK(this.Name, 20 , "The name exceeds the maximum allowed length. Please enter a shorter name", "Name")
-            .NameNotEmptyOK(this.Developer, 20, "The name exceeds the maximum allowed length. Please enter a shorter name", "Developer");
+            .NameNotEmptyOK(this.Name, 20 , "Invalid Name. Please enter a shorter name", "Name")
+            .NameNotEmptyOK(this.Developer, 20, "Invalid Name. Please enter a shorter name", "Developer");
 
         return contract.IsValid();
     }
