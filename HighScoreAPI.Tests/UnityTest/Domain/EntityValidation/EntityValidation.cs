@@ -1,9 +1,4 @@
 ﻿using HighScoreAPI.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HighScoreAPI.Tests.UnityTest.Domain.EntityValidation;
 public class EntityValidation
@@ -31,7 +26,6 @@ public class EntityValidation
         game.Developer = "DnDeveloper";
 
         Assert.False(game.Validation());
-
     }
 
     [Fact(DisplayName = "Score Validation")]
@@ -40,6 +34,5 @@ public class EntityValidation
         var HighScore = new highscore { Score = -10 };
 
         Assert.False(HighScore.Validation());
-
     }
 }

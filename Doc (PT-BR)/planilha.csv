@@ -1,0 +1,8 @@
+;;;;
+TESTES UNITARIOS;TESTES DE VALIDAÇÕES DE ENTRADA DE DADOS;;;
+Tipo de Entidade;Nome do Teste;Resultado Esperado;Resultado Obtido;Observações
+Player;Player Name Validation;False;False;Teste falhou para nome de usuário vazio
+Player;Player Name Validation;False;False;Teste falhou para nome de usuário muito longo (20+ caracteres)
+Game;Game Name Validation;False;False;Teste falhou para nome de jogo/desenvolvedor vazio
+Game;Game Name Validation;False;False;Teste falhou para nome de jogo/desenvolvedor muito longo (20+ caracteres)
+Game;Score Validation;False;False;Teste falhou para pontuação negativa

@@ -2,7 +2,6 @@ using HighScoreAPI.Data.Context;
 using HighScoreAPI.Data.Interfaces;
 using HighScoreAPI.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,10 +25,4 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
-
-
-
 app.Run();
-
-

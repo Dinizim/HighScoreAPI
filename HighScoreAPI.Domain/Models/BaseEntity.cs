@@ -1,13 +1,8 @@
-﻿using HighScoreAPI.Domain.Repositories;
-using HighScoreAPI.Domain.Validation.notification;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HighScoreAPI.Domain.Validation.notification;
 
 namespace HighScoreAPI.Domain.Models;
-public abstract class BaseEntity 
+
+public abstract class BaseEntity
 {
     private List<Notification> _notifications;
 

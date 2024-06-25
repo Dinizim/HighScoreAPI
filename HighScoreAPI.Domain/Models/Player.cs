@@ -1,5 +1,4 @@
-﻿using HighScoreAPI.Domain.Repositories;
-using HighScoreAPI.Domain.Validation;
+﻿using HighScoreAPI.Domain.Validation;
 using HighScoreAPI.Domain.Validation.Interfaces;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -12,6 +11,7 @@ public class Player : BaseEntity, IContract
 
     [Key]
     public int Player_Id { get; set; }
+
     public string Username { get; set; }
 
     [JsonIgnore]

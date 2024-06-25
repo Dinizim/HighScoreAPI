@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HighScoreAPI.Domain.Validation.notification;
+﻿using HighScoreAPI.Domain.Validation.notification;
 
 namespace HighScoreAPI.Domain.Validation;
 public partial class ContractValidations<T>

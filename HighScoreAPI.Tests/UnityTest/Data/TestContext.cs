@@ -1,14 +1,9 @@
-﻿using HighScoreAPI.Data.Context;
-using HighScoreAPI.Domain.Models;
+﻿using HighScoreAPI.Domain.Models;
 using HighScoreAPI.Domain.Validation.notification;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HighScoreAPI.Tests.UnityTest.Data;
+
 public class TestDbContext : DbContext
 {
     public TestDbContext(DbContextOptions<TestDbContext> options) : base(options)
@@ -32,6 +27,5 @@ public class TestDbContext : DbContext
              .HasOne(hs => hs.Game)
              .WithMany(game => game.HighScores)
              .HasForeignKey(fk => fk.GameId);
-
     }
 }

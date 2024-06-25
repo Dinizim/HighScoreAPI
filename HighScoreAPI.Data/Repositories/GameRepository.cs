@@ -2,15 +2,10 @@
 using HighScoreAPI.Data.Interfaces;
 using HighScoreAPI.Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HighScoreAPI.Data.Repositories;
 public class GameRepository : IGameRepository
-{ 
+{
     private readonly AppDbContext _context;
 
     public GameRepository(AppDbContext context)
@@ -37,7 +32,6 @@ public class GameRepository : IGameRepository
             var game = await _context.Games.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
             if (game == null)
             {
-
                 throw new KeyNotFoundException($"Entity with id {id} not found"); ;
             }
             return game;
@@ -68,7 +62,6 @@ public class GameRepository : IGameRepository
             var existingGame = await _context.Games.FindAsync(game.Id);
             if (existingGame == null)
             {
-
                 throw new KeyNotFoundException($"Entity with id {game.Id} not found");
             }
 
@@ -123,5 +116,4 @@ public class GameRepository : IGameRepository
 
         return true;
     }
-
 }

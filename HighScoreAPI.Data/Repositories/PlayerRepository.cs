@@ -2,18 +2,12 @@
 using HighScoreAPI.Data.Interfaces;
 using HighScoreAPI.Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace HighScoreAPI.Data.Repositories
 {
     public class PlayerRepository : IPlayerRepository
     {
         private readonly AppDbContext _context;
-   
 
         public PlayerRepository(AppDbContext context)
         {
@@ -39,7 +33,6 @@ namespace HighScoreAPI.Data.Repositories
                 var player = await _context.Players.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
                 if (player == null)
                 {
-                    
                     throw new KeyNotFoundException($"Entity with id {id} not found");
                 }
                 return player;
@@ -70,7 +63,6 @@ namespace HighScoreAPI.Data.Repositories
                 var existingPlayer = await _context.Players.FindAsync(player.Id);
                 if (existingPlayer == null)
                 {
-
                     throw new KeyNotFoundException($"Entity with id {player.Id} not found");
                 }
 

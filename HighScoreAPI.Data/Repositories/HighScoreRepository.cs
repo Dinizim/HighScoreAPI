@@ -1,13 +1,7 @@
 ﻿using HighScoreAPI.Data.Context;
 using HighScoreAPI.Data.Interfaces;
 using HighScoreAPI.Domain.Models;
-using HighScoreAPI.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HighScoreAPI.Data.Repositories;
 
@@ -50,7 +44,6 @@ public class HighScoreRepository : IHighScoreRepository
 
             if (highscore == null)
             {
-
                 throw new KeyNotFoundException($"Entity with id {id} not found");
             }
             return highscore;
@@ -81,7 +74,6 @@ public class HighScoreRepository : IHighScoreRepository
             var existingHighscore = await _context.HighScores.FindAsync(highscore.Id);
             if (existingHighscore == null)
             {
-
                 throw new KeyNotFoundException($"Entity with id {highscore.Id} not found");
             }
 
@@ -163,7 +155,7 @@ public class HighScoreRepository : IHighScoreRepository
                 .HighScores
                 .OrderByDescending(x => x.Score)
                 .Where(x => x.GameId == gameId && x.PlayerId == playerId)
-                .FirstOrDefaultAsync(); 
+                .FirstOrDefaultAsync();
         }
         catch (Exception ex)
         {
@@ -171,4 +163,3 @@ public class HighScoreRepository : IHighScoreRepository
         }
     }
 }
-
