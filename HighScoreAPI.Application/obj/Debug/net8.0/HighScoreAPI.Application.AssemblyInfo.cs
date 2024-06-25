@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HighScoreAPI.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c56606b36b6fe95a70ded11b2fb8e1ab8531290b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6148b897ddb37663c987a9fb65228b1d38c29fa3")]
 [assembly: System.Reflection.AssemblyProductAttribute("HighScoreAPI.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HighScoreAPI.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

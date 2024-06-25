@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HighScoreAPI.Application.Output.Request.Interfaces;
-
-public interface IRequestBase
+namespace HighScoreAPI.Application.Input.Commands.interfaces;
+public interface ICommandBase
 {
 }
