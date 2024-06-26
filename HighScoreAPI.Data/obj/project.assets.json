@@ -1491,19 +1491,6 @@
           }
         }
       },
-      "HighScoreAPI.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "HighScoreAPI.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/HighScoreAPI.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HighScoreAPI.Application.dll": {}
-        }
-      },
       "HighScoreAPI.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -4082,11 +4069,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "HighScoreAPI.Application/1.0.0": {
-      "type": "project",
-      "path": "../HighScoreAPI.Application/HighScoreAPI.Application.csproj",
-      "msbuildProject": "../HighScoreAPI.Application/HighScoreAPI.Application.csproj"
-    },
     "HighScoreAPI.Domain/1.0.0": {
       "type": "project",
       "path": "../HighScoreAPI.Domain/HighScoreAPI.Domain.csproj",
@@ -4095,7 +4077,6 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "HighScoreAPI.Application >= 1.0.0",
       "HighScoreAPI.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.6"
@@ -4133,9 +4114,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\HighScoreAPI.Application.csproj": {
-              "projectPath": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\HighScoreAPI.Application.csproj"
-            },
             "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Domain\\HighScoreAPI.Domain.csproj": {
               "projectPath": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Domain\\HighScoreAPI.Domain.csproj"
             }

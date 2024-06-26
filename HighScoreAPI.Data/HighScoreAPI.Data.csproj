@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\HighScoreAPI.Application\HighScoreAPI.Application.csproj" />
     <ProjectReference Include="..\HighScoreAPI.Domain\HighScoreAPI.Domain.csproj" />
   </ItemGroup>
 

@@ -1614,7 +1614,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "HighScoreAPI.Application": "1.0.0",
           "HighScoreAPI.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6"
         },

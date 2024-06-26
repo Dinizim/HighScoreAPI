@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "VgfE7JYK1eWxlitA4mCxBSRRds1cTZkPcZKRQua2LBw=",
+  "Source": "HighScoreAPI.WEBAPI",
+  "BasePath": "_content/HighScoreAPI.WEBAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

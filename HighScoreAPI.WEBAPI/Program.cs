@@ -1,6 +1,6 @@
-using HighScoreAPI.Application.Repositories.Interfaces;
 using HighScoreAPI.Data.Context;
 using HighScoreAPI.Data.Repositories;
+using HighScoreAPI.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
