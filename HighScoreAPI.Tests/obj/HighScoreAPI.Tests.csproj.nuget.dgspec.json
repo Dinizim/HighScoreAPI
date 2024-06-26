@@ -100,6 +100,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\HighScoreAPI.Application.csproj": {
+                "projectPath": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\HighScoreAPI.Application.csproj"
+              },
               "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Domain\\HighScoreAPI.Domain.csproj": {
                 "projectPath": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Domain\\HighScoreAPI.Domain.csproj"
               }

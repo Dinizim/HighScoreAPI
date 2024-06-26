@@ -1,5 +1,5 @@
+using HighScoreAPI.Application.Repositories.Interfaces;
 using HighScoreAPI.Data.Context;
-using HighScoreAPI.Data.Interfaces;
 using HighScoreAPI.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 
