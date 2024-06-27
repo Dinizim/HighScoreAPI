@@ -1,0 +1,12 @@
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\bin\Debug\net8.0\HighScoreAPI.Domain.deps.json
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\bin\Debug\net8.0\HighScoreAPI.Domain.dll
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\bin\Debug\net8.0\HighScoreAPI.Domain.pdb
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\obj\Debug\net8.0\HighScoreAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\obj\Debug\net8.0\HighScoreAPI.Domain.AssemblyInfoInputs.cache
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\obj\Debug\net8.0\HighScoreAPI.Domain.AssemblyInfo.cs
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\obj\Debug\net8.0\HighScoreAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\obj\Debug\net8.0\HighScoreAPI.Domain.sourcelink.json
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\obj\Debug\net8.0\HighScoreAPI.Domain.dll
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\obj\Debug\net8.0\refint\HighScoreAPI.Domain.dll
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\obj\Debug\net8.0\HighScoreAPI.Domain.pdb
+C:\Dev\HighScoreAPI\HighScoreAPI.Domain\obj\Debug\net8.0\ref\HighScoreAPI.Domain.dll
