@@ -8,24 +8,27 @@ using System.Threading.Tasks;
 namespace HighScoreAPI.Application.Result;
 public class OperationResult
 {
-    private List<string> Errors;
+    private List<string> _errors;
 
     public OperationResult(int statusCode, bool success, string message)
     {
         StatusCode = statusCode;
         Success = success;
         Message = message;
-        Errors = new List<string>();
+        _errors = new List<string>();
     }
 
-    public int StatusCode { get; set; }
-    public bool Success { get; set; }
-    public string Message { get; set; }
-    public IReadOnlyCollection<string> _errors => Errors;
-    
+    public int StatusCode { get; private set; }
+    public bool Success { get; private set; }
+    public string Message { get; private set; }
+    public object Data { get; set; }
+
+    public IReadOnlyCollection<string> Errors => _errors;
 
     public void SetErrors(string errors)
     {
-        Errors.Add(errors);
+        _errors.Add(errors);
     }
+
+
 }

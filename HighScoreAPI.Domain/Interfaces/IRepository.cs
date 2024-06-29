@@ -1,4 +1,6 @@
-﻿namespace HighScoreAPI.Domain.Repositories;
+﻿using System.Linq.Expressions;
+
+namespace HighScoreAPI.Domain.Repositories;
 
 public interface IGenericRepository<T> where T : class
 {
@@ -14,5 +16,5 @@ public interface IGenericRepository<T> where T : class
 
     Task<long> CountAsync();
 
-    Task<bool> ExistsAsync(int id);
+    Task<bool> ExistsAsync(T entity);
 }

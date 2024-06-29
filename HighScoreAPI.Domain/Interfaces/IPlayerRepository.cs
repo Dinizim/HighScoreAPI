@@ -5,4 +5,5 @@ namespace HighScoreAPI.Domain.Interfaces;
 
 public interface IPlayerRepository : IGenericRepository<Player>
 {
+    Task<Player> FindByUsernameAsync(string username);
 }

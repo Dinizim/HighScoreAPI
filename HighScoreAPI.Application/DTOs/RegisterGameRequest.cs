@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HighScoreAPI.Application.DTOs;
-public class RegisterGameRequest
+public class RegisterScorePlayerInGameReques
 {
     public string Name { get; set; }
 

@@ -30,7 +30,6 @@ public class HighScoreRepository : IHighScoreRepository
             throw new Exception("An error occurred while accessing the database", ex);
         }
     }
-
     public async Task<highscore> GetByIdAsync(int id)
     {
         try
@@ -119,15 +118,10 @@ public class HighScoreRepository : IHighScoreRepository
         }
     }
 
-    public async Task<bool> ExistsAsync(int id)
+    public async Task<bool> ExistsAsync(highscore highscore)
     {
-        var highscore = await _context.HighScores.FindAsync(id);
-        if (highscore == null)
-        {
-            return false;
-        }
-
-        return true;
+        bool exists = await _context.HighScores.AnyAsync(g => g.PlayerId == highscore.PlayerId && g.GameId == highscore.GameId);
+        return exists;
     }
 
     public async Task<IEnumerable<highscore>> GetTopHighScoreByGameAsync(int gameId)

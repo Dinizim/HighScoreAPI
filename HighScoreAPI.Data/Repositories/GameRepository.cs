@@ -25,6 +25,22 @@ public class GameRepository : IGameRepository
         }
     }
 
+    public async Task<Game> GetByNameasync(string name)
+    {
+        try
+        {
+            var game = await _context.Games.AsNoTracking().FirstOrDefaultAsync(x => x.Name == name);
+            if (game == null)
+            {
+                throw new KeyNotFoundException($"Entity with name {name} not found");
+            }
+            return game;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("An error occurred while accessing the database", ex);
+        }
+    }
     public async Task<Game> GetByIdAsync(int id)
     {
         try
@@ -106,14 +122,9 @@ public class GameRepository : IGameRepository
         }
     }
 
-    public async Task<bool> ExistsAsync(int id)
+    public async Task<bool> ExistsAsync(Game game)
     {
-        var game = await _context.Games.FindAsync(id);
-        if (game == null)
-        {
-            return false;
-        }
-
-        return true;
+        bool exists = await _context.Games.AnyAsync(g => g.Name == game.Name && g.Developer == game.Developer);
+        return exists;
     }
 }

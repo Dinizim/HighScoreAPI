@@ -15,13 +15,20 @@ public class GameController : ControllerBase
         _registerGameUseCase = registerGameUseCase;
     }
     [HttpPost("RegisterGame")]
-    public async Task<IActionResult> RegisterGame([FromBody] RegisterGameRequest request)
+    public async Task<IActionResult> RegisterGame([FromBody] RegisterScorePlayerInGameReques request)
     {
         var result = await _registerGameUseCase.Handle(request);
 
         if (!result.Success)
         {
-            return BadRequest(result);
+            if (result.StatusCode == 400)
+            {
+                return BadRequest(result);
+            }
+            else if (result.StatusCode == 500)
+            {
+                return StatusCode(500, result);
+            }
         }
 
         return Ok(result);

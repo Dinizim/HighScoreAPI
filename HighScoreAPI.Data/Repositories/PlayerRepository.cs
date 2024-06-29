@@ -26,6 +26,24 @@ namespace HighScoreAPI.Data.Repositories
             }
         }
 
+        
+        public async Task<Player> FindByUsernameAsync(string username)
+        {
+            try
+            {
+                var player = await _context.Players.AsNoTracking().FirstOrDefaultAsync(x => x.Username == username);
+                if (player == null)
+                {
+                    throw new KeyNotFoundException($"Entity with username {username} not found");
+                }
+                return player;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while accessing the database", ex);
+            }
+        }
+
         public async Task<Player> GetByIdAsync(int id)
         {
             try
@@ -108,15 +126,10 @@ namespace HighScoreAPI.Data.Repositories
             }
         }
 
-        public async Task<bool> ExistsAsync(int id)
+        public async Task<bool> ExistsAsync(Player player)
         {
-            var player = await _context.Players.FindAsync(id);
-            if (player == null)
-            {
-                return false;
-            }
-
-            return true;
+            bool exists = await _context.Players.AnyAsync(g => g.Username == player.Username);
+            return exists;
         }
     }
 }

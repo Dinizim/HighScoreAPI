@@ -21,7 +21,7 @@ public class Game : BaseEntity, IContract
     {
         var contract = new ContractValidations<Game>()
             .NameNotEmptyOK(this.Name, 20, "Invalid Name. Please enter a shorter name", "Name")
-            .NameNotEmptyOK(this.Developer, 20, "Invalid Name. Please enter a shorter name", "Developer");
+            .NameNotEmptyOK(this.Developer, 20, "Invalid Devloper Name. Please enter a shorter name", "Developer");
 
         return contract.IsValid();
     }
