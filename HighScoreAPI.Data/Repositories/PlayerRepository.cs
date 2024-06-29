@@ -32,10 +32,6 @@ namespace HighScoreAPI.Data.Repositories
             try
             {
                 var player = await _context.Players.AsNoTracking().FirstOrDefaultAsync(x => x.Username == username);
-                if (player == null)
-                {
-                    throw new KeyNotFoundException($"Entity with username {username} not found");
-                }
                 return player;
             }
             catch (Exception ex)

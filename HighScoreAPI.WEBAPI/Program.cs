@@ -18,6 +18,7 @@ builder.Services.AddScoped<IGameRepository, GameRepository>();
 builder.Services.AddScoped<IHighScoreRepository, HighScoreRepository>();
 
 builder.Services.AddScoped<RegisterGameUseCases>();
+builder.Services.AddScoped<RegisterScorePlayerInGameUseCase>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

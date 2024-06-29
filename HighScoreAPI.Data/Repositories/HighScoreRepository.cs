@@ -70,13 +70,7 @@ public class HighScoreRepository : IHighScoreRepository
     {
         try
         {
-            var existingHighscore = await _context.HighScores.FindAsync(highscore.Id);
-            if (existingHighscore == null)
-            {
-                throw new KeyNotFoundException($"Entity with id {highscore.Id} not found");
-            }
-
-            _context.Entry(existingHighscore).CurrentValues.SetValues(highscore);
+            _context.HighScores.Update(highscore);
             await _context.SaveChangesAsync();
         }
         catch (Exception ex)
@@ -147,7 +141,6 @@ public class HighScoreRepository : IHighScoreRepository
         {
             return await _context
                 .HighScores
-                .OrderByDescending(x => x.Score)
                 .Where(x => x.GameId == gameId && x.PlayerId == playerId)
                 .FirstOrDefaultAsync();
         }
