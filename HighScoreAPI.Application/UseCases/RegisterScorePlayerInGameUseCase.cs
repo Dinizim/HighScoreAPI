@@ -1,4 +1,5 @@
 ﻿using HighScoreAPI.Application.DTOs;
+using HighScoreAPI.Application.Request;
 using HighScoreAPI.Application.Result;
 using HighScoreAPI.Domain.Interfaces;
 using HighScoreAPI.Domain.Models;
@@ -15,6 +16,7 @@ public class RegisterScorePlayerInGameUseCase
     private readonly IGameRepository _gameRepository;
     private readonly IHighScoreRepository _highscoreRepository;
     private readonly IPlayerRepository _playerRepository;
+
     public RegisterScorePlayerInGameUseCase(IGameRepository gamerepository, IPlayerRepository playerRepository, IHighScoreRepository highscoreRepository)
     {
         _gameRepository = gamerepository;
@@ -31,7 +33,7 @@ public class RegisterScorePlayerInGameUseCase
                 return new OperationResult(400, false, "Failed to insert the new score, check the fields and try again.");
             }
 
-            var existingGame = await _gameRepository.FindByNameAsync(request.Game);
+            var existingGame = await _gameRepository.FindByNameAsync(request.Game , request.DeveloperGame);
             if (existingGame == null)
             {
                 return new OperationResult(400, false, "Game not exists.");

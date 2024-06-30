@@ -24,11 +24,11 @@ public class GameRepository : IGameRepository
             throw new Exception("An error occurred while accessing the database", ex);
         }
     }
-    public async Task<Game> FindByNameAsync(string name)
+    public async Task<Game> FindByNameAsync(string name , string devoloper)
     {
         try
         {
-            var game = await _context.Games.AsNoTracking().FirstOrDefaultAsync(x => x.Name == name);
+            var game = await _context.Games.AsNoTracking().FirstOrDefaultAsync(x => x.Name == name && x.Developer == devoloper);
             return game;
         }
         catch (Exception ex)

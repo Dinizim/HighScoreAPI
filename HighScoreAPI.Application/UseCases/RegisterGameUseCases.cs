@@ -2,8 +2,8 @@
 using HighScoreAPI.Domain.Interfaces;
 using HighScoreAPI.Domain.Models;
 using HighScoreAPI.Application.Result;
-using HighScoreAPI.Domain.Validation.notification;
-using System.Reflection.Metadata.Ecma335;
+
+using HighScoreAPI.Application.Request;
 
 namespace HighScoreAPI.Application.UseCases;
 public class RegisterGameUseCases
@@ -15,7 +15,7 @@ public class RegisterGameUseCases
         _repository = repository;
     }
 
-    public async Task<OperationResult> Handle(RegisterScorePlayerInGameReques request)
+    public async Task<OperationResult> Handle(RegisterGameRequest request)
     {
         var game = new Game
         {

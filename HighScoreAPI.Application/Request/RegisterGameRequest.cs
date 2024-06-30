@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HighScoreAPI.Application.DTOs;
-public class RegisterScorePlayerInGameReques
+namespace HighScoreAPI.Application.Request;
+public class RegisterGameRequest
 {
     public string Name { get; set; }
 

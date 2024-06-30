@@ -1,4 +1,4 @@
-﻿using HighScoreAPI.Application.DTOs;
+﻿using HighScoreAPI.Application.Request;
 using HighScoreAPI.Application.UseCases;
 using Microsoft.AspNetCore.Mvc;
 
