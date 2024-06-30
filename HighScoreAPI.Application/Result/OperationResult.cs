@@ -29,6 +29,10 @@ public class OperationResult
     {
         _errors.Add(errors);
     }
+    public void SetData<T>(T data)
+    {
+        Data = data;
+    }
 
 
 }

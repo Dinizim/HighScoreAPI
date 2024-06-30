@@ -6,12 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HighScoreAPI.Application.Request;
-public class GetPlayerHighScoreByGameRequest
+public class GetScoresPlayerbyGameRequest
 {
     public string Game { get; set; }
-
-    public string Player { get; set; }
-
     public string Developer { get; set; }
-
 }

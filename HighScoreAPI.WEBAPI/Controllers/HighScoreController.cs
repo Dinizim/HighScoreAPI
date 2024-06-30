@@ -9,13 +9,19 @@ namespace HighScoreAPI.WEBAPI.Controllers;
 public class HighScoreController : ControllerBase
 {
     private readonly RegisterScorePlayerInGameUseCase _registerScorePlayerInGameUseCase;
+    private readonly GetPlayerHighScoreByGameUseCase _getPlayerHighScoreByGameUseCase;
+    private readonly GetScoresPlayerbyGameUseCase _getTopHighScoreByGameUseCase;
 
-    public HighScoreController(RegisterScorePlayerInGameUseCase registerScorePlayerInGameUseCase)
+
+    public HighScoreController(RegisterScorePlayerInGameUseCase registerScorePlayerInGameUseCase, GetPlayerHighScoreByGameUseCase getPlayerHighScoreByGameUse, GetScoresPlayerbyGameUseCase getTopHighScoreByGameUseCase)
     {
         _registerScorePlayerInGameUseCase = registerScorePlayerInGameUseCase;
+        _getPlayerHighScoreByGameUseCase = getPlayerHighScoreByGameUse;
+        _getTopHighScoreByGameUseCase = getTopHighScoreByGameUseCase;
     }
-    [HttpPost("RegisterPlayer")]
-    public async Task<IActionResult> RegisterGame([FromBody] RegisterScorePlayerInGameRequest request)
+
+    [HttpPost("RegisterScore")]
+    public async Task<IActionResult> RegisterScore([FromBody] RegisterScorePlayerInGameRequest request)
     {
         var result = await _registerScorePlayerInGameUseCase.Handle(request);
 
@@ -33,4 +39,44 @@ public class HighScoreController : ControllerBase
 
         return Ok(result);
     }
+
+    [HttpGet("GetScore")]
+    public async Task<IActionResult> GetPlayerHighScoreByGame([FromQuery] GetPlayerHighScoreByGameRequest request)
+    {
+        var result = await _getPlayerHighScoreByGameUseCase.Handle(request);
+
+        if (!result.Success)
+        {
+            if (result.StatusCode == 400)
+            {
+                return BadRequest(result);
+            }
+            else if (result.StatusCode == 500)
+            {
+                return StatusCode(500, result);
+            }
+        }
+
+        return Ok(result);
+    }
+    [HttpGet("GetScores")]
+    public async Task<IActionResult> GetTopHighScoreByGame([FromQuery] GetScoresPlayerbyGameRequest request)
+    {
+        var result = await _getTopHighScoreByGameUseCase.Handle(request);
+
+        if (!result.Success)
+        {
+            if (result.StatusCode == 400)
+            {
+                return BadRequest(result);
+            }
+            else if (result.StatusCode == 500)
+            {
+                return StatusCode(500, result);
+            }
+        }
+
+        return Ok(result);
+    }
+
 }

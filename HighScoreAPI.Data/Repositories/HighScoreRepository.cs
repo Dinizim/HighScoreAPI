@@ -126,7 +126,7 @@ public class HighScoreRepository : IHighScoreRepository
                 .HighScores
                 .OrderByDescending(x => x.Score)
                 .Where(x => x.GameId == gameId)
-                .Take(20)
+                .Take(10)
                 .ToListAsync();
         }
         catch (Exception ex)

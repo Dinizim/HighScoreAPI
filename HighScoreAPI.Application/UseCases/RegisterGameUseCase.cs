@@ -6,11 +6,11 @@ using HighScoreAPI.Application.Result;
 using HighScoreAPI.Application.Request;
 
 namespace HighScoreAPI.Application.UseCases;
-public class RegisterGameUseCases
+public class RegisterGameUseCase
 {
     private readonly IGameRepository _repository;
 
-    public RegisterGameUseCases(IGameRepository repository)
+    public RegisterGameUseCase(IGameRepository repository)
     {
         _repository = repository;
     }

@@ -8,14 +8,15 @@ namespace HighScoreAPI.WEBAPI.Controllers;
 [Route("v1/[controller]")]
 public class GameController : ControllerBase
 {
-    private readonly RegisterGameUseCases _registerGameUseCase;
+    private readonly RegisterGameUseCase _registerGameUseCase;
 
-    public GameController(RegisterGameUseCases registerGameUseCase)
+    public GameController(RegisterGameUseCase registerGameUseCase)
     {
         _registerGameUseCase = registerGameUseCase;
     }
+    
     [HttpPost("RegisterGame")]
-    public async Task<IActionResult> RegisterGame([FromBody] RegisterScorePlayerInGameReques request)
+    public async Task<IActionResult> RegisterGame([FromBody] RegisterGameRequest request)
     {
         var result = await _registerGameUseCase.Handle(request);
 
