@@ -31,7 +31,7 @@ public class EntityValidation
     [Fact(DisplayName = "Score Validation")]
     public void GivenNegativeScore_When_NegativeNumber_ShouldFail()
     {
-        var HighScore = new highscore { Score = -10 };
+        var HighScore = new HighScore { Score = -10 };
 
         Assert.False(HighScore.Validation());
     }

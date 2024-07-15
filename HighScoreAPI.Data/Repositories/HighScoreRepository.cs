@@ -14,7 +14,7 @@ public class HighScoreRepository : IHighScoreRepository
         _context = context;
     }
 
-    public async Task<IEnumerable<highscore>> GetAllAsync()
+    public async Task<IEnumerable<HighScore>> GetAllAsync()
     {
         try
         {
@@ -30,7 +30,7 @@ public class HighScoreRepository : IHighScoreRepository
             throw new Exception("An error occurred while accessing the database", ex);
         }
     }
-    public async Task<highscore> GetByIdAsync(int id)
+    public async Task<HighScore> GetByIdAsync(int id)
     {
         try
         {
@@ -53,7 +53,7 @@ public class HighScoreRepository : IHighScoreRepository
         }
     }
 
-    public async Task AddAsync(highscore highscore)
+    public async Task AddAsync(HighScore highscore)
     {
         try
         {
@@ -66,7 +66,7 @@ public class HighScoreRepository : IHighScoreRepository
         }
     }
 
-    public async Task UpdateAsync(highscore highscore)
+    public async Task UpdateAsync(HighScore highscore)
     {
         try
         {
@@ -112,19 +112,21 @@ public class HighScoreRepository : IHighScoreRepository
         }
     }
 
-    public async Task<bool> ExistsAsync(highscore highscore)
+    public async Task<bool> ExistsAsync(HighScore highscore)
     {
         bool exists = await _context.HighScores.AnyAsync(g => g.PlayerId == highscore.PlayerId && g.GameId == highscore.GameId);
         return exists;
     }
 
-    public async Task<IEnumerable<highscore>> GetTopHighScoreByGameAsync(int gameId)
+    public async Task<IEnumerable<HighScore>> GetTopHighScoreByGameAsync(int gameId)
     {
         try
         {
             return await _context
                 .HighScores
                 .OrderByDescending(x => x.Score)
+                .Include(x => x.Player)
+                .Include(x => x.Game)
                 .Where(x => x.GameId == gameId)
                 .Take(10)
                 .ToListAsync();
@@ -135,13 +137,15 @@ public class HighScoreRepository : IHighScoreRepository
         }
     }
 
-    public async Task<highscore> GetHighscoreByPlayerToGameAsync(int gameId, int playerId)
+    public async Task<HighScore> GetHighscoreByPlayerToGameAsync(int gameId, int playerId)
     {
         try
         {
             return await _context
                 .HighScores
                 .Where(x => x.GameId == gameId && x.PlayerId == playerId)
+                .Include(x => x.Player)
+                .Include(x => x.Game)
                 .FirstOrDefaultAsync();
         }
         catch (Exception ex)

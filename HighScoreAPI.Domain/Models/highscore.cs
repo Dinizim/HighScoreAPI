@@ -3,7 +3,7 @@ using HighScoreAPI.Domain.Validation.Interfaces;
 
 namespace HighScoreAPI.Domain.Models;
 
-public class highscore : BaseEntity, IContract
+public class HighScore : BaseEntity, IContract
 {
     public int Id => HighScoreId;
     public int HighScoreId { get; set; }
@@ -18,7 +18,7 @@ public class highscore : BaseEntity, IContract
 
     public override bool Validation()
     {
-        var contract = new ContractValidations<highscore>()
+        var contract = new ContractValidations<HighScore>()
             .ScoreNoTNegativeOK(Score, "The score cannot be negative. Please Enter a valid score", "Score");
 
         return contract.IsValid();

@@ -3,9 +3,9 @@ using HighScoreAPI.Domain.Repositories;
 
 namespace HighScoreAPI.Domain.Interfaces;
 
-public interface IHighScoreRepository : IGenericRepository<highscore>
+public interface IHighScoreRepository : IGenericRepository<HighScore>
 {
-    Task<IEnumerable<highscore>> GetTopHighScoreByGameAsync(int gameId);
+    Task<IEnumerable<HighScore>> GetTopHighScoreByGameAsync(int gameId);
 
-    Task<highscore> GetHighscoreByPlayerToGameAsync(int gameId, int playerId);
+    Task<HighScore> GetHighscoreByPlayerToGameAsync(int gameId, int playerId);
 }

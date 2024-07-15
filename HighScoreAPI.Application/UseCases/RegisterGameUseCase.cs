@@ -6,6 +6,7 @@ using HighScoreAPI.Application.Result;
 using HighScoreAPI.Application.Request;
 
 namespace HighScoreAPI.Application.UseCases;
+
 public class RegisterGameUseCase
 {
     private readonly IGameRepository _repository;
@@ -38,7 +39,7 @@ public class RegisterGameUseCase
                 if (await _repository.ExistsAsync(game))
                 {
                     var success = new OperationResult(200, true, "Game registered successfully");
-                    success.Data = new GameDTO(game.Game_Id, game.Name, game.Type, game.Developer);
+                    success.SetData(new GameDTO(game.Game_Id, game.Name, game.Type, game.Developer));
                     return success;
                 }
             }
@@ -52,5 +53,4 @@ public class RegisterGameUseCase
         result.SetErrors("names are required");
         return result;
     }
-
 }

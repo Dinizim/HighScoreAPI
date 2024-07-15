@@ -15,7 +15,7 @@ public class Player : BaseEntity, IContract
     public string Username { get; set; }
 
     [JsonIgnore]
-    public ICollection<highscore> HighScores { get; set; }
+    public ICollection<HighScore> HighScores { get; set; }
 
     public override bool Validation()
     {

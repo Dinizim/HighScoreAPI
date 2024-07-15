@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace HighScoreAPI.Application.DTOs;
 public  class ScoreDTO
 {
+
     public ScoreDTO(string username, string game, string developerGame, double score)
     {
         Username = username;

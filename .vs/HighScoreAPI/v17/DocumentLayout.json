@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Dev\\HighScoreAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50673B00-F45C-4847-A494-EAAF42EEC996}|HighScoreAPI.WEBAPI\\HighScoreAPI.WEBAPI.csproj|c:\\dev\\highscoreapi\\highscoreapi.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50673B00-F45C-4847-A494-EAAF42EEC996}|HighScoreAPI.WEBAPI\\HighScoreAPI.WEBAPI.csproj|solutionrelative:highscoreapi.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|c:\\dev\\highscoreapi\\highscoreapi.application\\usecases\\getplayerhighscorebygameusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|solutionrelative:highscoreapi.application\\usecases\\getplayerhighscorebygameusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50673B00-F45C-4847-A494-EAAF42EEC996}|HighScoreAPI.WEBAPI\\HighScoreAPI.WEBAPI.csproj|c:\\dev\\highscoreapi\\highscoreapi.webapi\\controllers\\highscorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50673B00-F45C-4847-A494-EAAF42EEC996}|HighScoreAPI.WEBAPI\\HighScoreAPI.WEBAPI.csproj|solutionrelative:highscoreapi.webapi\\controllers\\highscorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|c:\\dev\\highscoreapi\\highscoreapi.application\\request\\registerscoreplayeringamerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|solutionrelative:highscoreapi.application\\request\\registerscoreplayeringamerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|c:\\dev\\highscoreapi\\highscoreapi.application\\usecases\\registergameusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|solutionrelative:highscoreapi.application\\usecases\\registergameusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|c:\\dev\\highscoreapi\\highscoreapi.application\\usecases\\getscoresplayerbygameusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|solutionrelative:highscoreapi.application\\usecases\\getscoresplayerbygameusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50673B00-F45C-4847-A494-EAAF42EEC996}|HighScoreAPI.WEBAPI\\HighScoreAPI.WEBAPI.csproj|c:\\dev\\highscoreapi\\highscoreapi.webapi\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50673B00-F45C-4847-A494-EAAF42EEC996}|HighScoreAPI.WEBAPI\\HighScoreAPI.WEBAPI.csproj|solutionrelative:highscoreapi.webapi\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|c:\\dev\\highscoreapi\\highscoreapi.application\\usecases\\registerscoreplayeringameusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|solutionrelative:highscoreapi.application\\usecases\\registerscoreplayeringameusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CA41B4-E717-4BF5-84DD-78C28A0980A0}|HighScoreAPI.Data\\HighScoreAPI.Data.csproj|c:\\dev\\highscoreapi\\highscoreapi.data\\repositories\\highscorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11CA41B4-E717-4BF5-84DD-78C28A0980A0}|HighScoreAPI.Data\\HighScoreAPI.Data.csproj|solutionrelative:highscoreapi.data\\repositories\\highscorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8033620F-DFE4-493F-A820-0862417655AB}|NewFolder1{8033620F-DFE4-493F-A820-0862417655AB}|C:\\Dev\\HighScoreAPI\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8033620F-DFE4-493F-A820-0862417655AB}|NewFolder1{8033620F-DFE4-493F-A820-0862417655AB}|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|c:\\dev\\highscoreapi\\highscoreapi.application\\usecases\\getplayerhighscorebygameusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|solutionrelative:highscoreapi.application\\usecases\\getplayerhighscorebygameusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|c:\\dev\\highscoreapi\\highscoreapi.application\\dtos\\getscoredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2375125-C446-4674-A870-069627771BB9}|HighScoreAPI.Application\\HighScoreAPI.Application.csproj|solutionrelative:highscoreapi.application\\dtos\\getscoredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +38,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegisterScorePlayerInGameRequest.cs",
+              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\Request\\RegisterScorePlayerInGameRequest.cs",
+              "RelativeDocumentMoniker": "HighScoreAPI.Application\\Request\\RegisterScorePlayerInGameRequest.cs",
+              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\Request\\RegisterScorePlayerInGameRequest.cs",
+              "RelativeToolTip": "HighScoreAPI.Application\\Request\\RegisterScorePlayerInGameRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T17:42:35.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Dev\\HighScoreAPI\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-07-15T17:27:14.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetScoreDTO.cs",
+              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\DTOs\\GetScoreDTO.cs",
+              "RelativeDocumentMoniker": "HighScoreAPI.Application\\DTOs\\GetScoreDTO.cs",
+              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\DTOs\\GetScoreDTO.cs",
+              "RelativeToolTip": "HighScoreAPI.Application\\DTOs\\GetScoreDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T17:01:52.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetPlayerHighScoreByGameUseCase.cs",
+              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\GetPlayerHighScoreByGameUseCase.cs",
+              "RelativeDocumentMoniker": "HighScoreAPI.Application\\UseCases\\GetPlayerHighScoreByGameUseCase.cs",
+              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\GetPlayerHighScoreByGameUseCase.cs",
+              "RelativeToolTip": "HighScoreAPI.Application\\UseCases\\GetPlayerHighScoreByGameUseCase.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACsAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T16:58:40.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetScoresPlayerbyGameUseCase.cs",
+              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\GetScoresPlayerbyGameUseCase.cs",
+              "RelativeDocumentMoniker": "HighScoreAPI.Application\\UseCases\\GetScoresPlayerbyGameUseCase.cs",
+              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\GetScoresPlayerbyGameUseCase.cs",
+              "RelativeToolTip": "HighScoreAPI.Application\\UseCases\\GetScoresPlayerbyGameUseCase.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAYwCcAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T11:43:34.846Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -46,80 +115,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.WEBAPI\\Program.cs",
-              "RelativeDocumentMoniker": "HighScoreAPI.WEBAPI\\Program.cs",
-              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.WEBAPI\\Program.cs",
-              "RelativeToolTip": "HighScoreAPI.WEBAPI\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T04:01:15.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.WEBAPI\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "HighScoreAPI.WEBAPI\\Controllers\\GameController.cs",
-              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.WEBAPI\\Controllers\\GameController.cs",
-              "RelativeToolTip": "HighScoreAPI.WEBAPI\\Controllers\\GameController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T03:59:45.252Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GetScoresPlayerbyGameUseCase.cs",
-              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\GetScoresPlayerbyGameUseCase.cs",
-              "RelativeDocumentMoniker": "HighScoreAPI.Application\\UseCases\\GetScoresPlayerbyGameUseCase.cs",
-              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\GetScoresPlayerbyGameUseCase.cs",
-              "RelativeToolTip": "HighScoreAPI.Application\\UseCases\\GetScoresPlayerbyGameUseCase.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAD4vzEAAAAAAAAA",
+              "Title": "RegisterGameUseCase.cs",
+              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\RegisterGameUseCase.cs",
+              "RelativeDocumentMoniker": "HighScoreAPI.Application\\UseCases\\RegisterGameUseCase.cs",
+              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\RegisterGameUseCase.cs",
+              "RelativeToolTip": "HighScoreAPI.Application\\UseCases\\RegisterGameUseCase.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAIwB0AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T03:59:29.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetPlayerHighScoreByGameUseCase.cs",
-              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\GetPlayerHighScoreByGameUseCase.cs",
-              "RelativeDocumentMoniker": "HighScoreAPI.Application\\UseCases\\GetPlayerHighScoreByGameUseCase.cs",
-              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\GetPlayerHighScoreByGameUseCase.cs",
-              "RelativeToolTip": "HighScoreAPI.Application\\UseCases\\GetPlayerHighScoreByGameUseCase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T03:57:18.161Z",
+              "WhenOpened": "2024-06-30T11:43:34.089Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HighScoreRepository.cs",
-              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Data\\Repositories\\HighScoreRepository.cs",
-              "RelativeDocumentMoniker": "HighScoreAPI.Data\\Repositories\\HighScoreRepository.cs",
-              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Data\\Repositories\\HighScoreRepository.cs",
-              "RelativeToolTip": "HighScoreAPI.Data\\Repositories\\HighScoreRepository.cs",
-              "ViewState": "AQIAAGQAAAAAAAAAAAAAAIAAAAAXAAAA",
+              "Title": "RegisterScorePlayerInGameUseCase.cs",
+              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\RegisterScorePlayerInGameUseCase.cs",
+              "RelativeDocumentMoniker": "HighScoreAPI.Application\\UseCases\\RegisterScorePlayerInGameUseCase.cs",
+              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.Application\\UseCases\\RegisterScorePlayerInGameUseCase.cs",
+              "RelativeToolTip": "HighScoreAPI.Application\\UseCases\\RegisterScorePlayerInGameUseCase.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAvwDcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T03:53:43.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HighScoreController.cs",
-              "DocumentMoniker": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.WEBAPI\\Controllers\\HighScoreController.cs",
-              "RelativeDocumentMoniker": "HighScoreAPI.WEBAPI\\Controllers\\HighScoreController.cs",
-              "ToolTip": "C:\\Dev\\HighScoreAPI\\HighScoreAPI.WEBAPI\\Controllers\\HighScoreController.cs",
-              "RelativeToolTip": "HighScoreAPI.WEBAPI\\Controllers\\HighScoreController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAD0AAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T03:53:35.725Z",
+              "WhenOpened": "2024-06-30T11:43:33.314Z",
               "EditorCaption": ""
             }
           ]

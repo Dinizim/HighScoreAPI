@@ -15,7 +15,7 @@ public class Game : BaseEntity, IContract
     public string Developer { get; set; }
 
     [JsonIgnore]
-    public ICollection<highscore> HighScores { get; set; }
+    public ICollection<HighScore> HighScores { get; set; }
 
     public override bool Validation()
     {

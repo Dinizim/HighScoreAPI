@@ -40,9 +40,15 @@ public class HighScoreController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("GetScore")]
-    public async Task<IActionResult> GetPlayerHighScoreByGame([FromQuery] GetPlayerHighScoreByGameRequest request)
+    [HttpGet("GetPlayerHighScore/{game}/{player}/{developer}")]
+    public async Task<IActionResult> GetPlayerHighScoreByGame(string game, string player, string developer)
     {
+        var request = new GetPlayerHighScoreByGameRequest
+        {
+            Game = game,
+            Player = player,
+            Developer = developer
+        };
         var result = await _getPlayerHighScoreByGameUseCase.Handle(request);
 
         if (!result.Success)
@@ -59,24 +65,36 @@ public class HighScoreController : ControllerBase
 
         return Ok(result);
     }
-    [HttpGet("GetScores")]
-    public async Task<IActionResult> GetTopHighScoreByGame([FromQuery] GetScoresPlayerbyGameRequest request)
-    {
-        var result = await _getTopHighScoreByGameUseCase.Handle(request);
 
-        if (!result.Success)
+
+
+
+
+    [HttpGet("GetScores/{gameName}/{developer}")]
+    public async Task<IActionResult> GetTopHighScoreByGame(string gameName, string developer)
+    {
+        var request = new GetScoresPlayerbyGameRequest
         {
-            if (result.StatusCode == 400)
+            Game = gameName,
+            Developer = developer
+        };
+        {
+            var result = await _getTopHighScoreByGameUseCase.Handle(request);
+
+            if (!result.Success)
             {
-                return BadRequest(result);
+                if (result.StatusCode == 400)
+                {
+                    return BadRequest(result);
+                }
+                else if (result.StatusCode == 500)
+                {
+                    return StatusCode(500, result);
+                }
             }
-            else if (result.StatusCode == 500)
-            {
-                return StatusCode(500, result);
-            }
+
+            return Ok(result);
         }
 
-        return Ok(result);
     }
-
 }

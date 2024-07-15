@@ -57,7 +57,7 @@ public class RegisterScorePlayerInGameUseCase
             }
             else
             {
-                var newHighScore = new highscore 
+                var newHighScore = new HighScore 
                 {
                     PlayerId = existingPlayer.Id,
                     GameId = existingGame.Id,
@@ -66,7 +66,7 @@ public class RegisterScorePlayerInGameUseCase
                 await _highscoreRepository.AddAsync(newHighScore);
             }
             var Success = new OperationResult(200, true, "Score registered successfully");
-            Success.Data = new ScoreDTO(existingPlayer.Username, existingGame.Name, existingGame.Developer, request.Score);
+            Success.SetData(new ScoreDTO(existingPlayer.Username, existingGame.Name, existingGame.Developer, request.Score));
             return Success;
         }
         catch (Exception ex)
