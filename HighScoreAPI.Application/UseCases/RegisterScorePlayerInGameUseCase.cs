@@ -17,61 +17,63 @@ public class RegisterScorePlayerInGameUseCase
     private readonly IHighScoreRepository _highscoreRepository;
     private readonly IPlayerRepository _playerRepository;
 
-    public RegisterScorePlayerInGameUseCase(IGameRepository gamerepository, IPlayerRepository playerRepository, IHighScoreRepository highscoreRepository)
+    public RegisterScorePlayerInGameUseCase(IGameRepository gameRepository, IPlayerRepository playerRepository, IHighScoreRepository highscoreRepository)
     {
-        _gameRepository = gamerepository;
+        _gameRepository = gameRepository;
         _playerRepository = playerRepository;
         _highscoreRepository = highscoreRepository;
     }
 
     public async Task<OperationResult> Handle(RegisterScorePlayerInGameRequest request)
     {
-        try
+        if (string.IsNullOrWhiteSpace(request.Game) || string.IsNullOrWhiteSpace(request.Username))
         {
-            if (string.IsNullOrWhiteSpace(request.Game) || string.IsNullOrWhiteSpace(request.Username))
-            {
-                return new OperationResult(400, false, "Failed to insert the new score, check the fields and try again.");
-            }
-
-            var existingGame = await _gameRepository.FindByNameAsync(request.Game , request.DeveloperGame);
-            if (existingGame == null)
-            {
-                return new OperationResult(400, false, "Game not exists.");
-            }
-
-            var existingPlayer = await _playerRepository.FindByUsernameAsync(request.Username);
-            if (existingPlayer == null)
-            {
-                existingPlayer = new Player { Username = request.Username };
-                await _playerRepository.AddAsync(existingPlayer);
-
-                
-                existingPlayer = await _playerRepository.FindByUsernameAsync(request.Username);
-            }
-
-            var existingHighScore = await _highscoreRepository.GetHighscoreByPlayerToGameAsync(existingGame.Id, existingPlayer.Id);
-            if (existingHighScore != null)
-            {
-                existingHighScore.Score = request.Score;
-                await _highscoreRepository.UpdateAsync(existingHighScore);
-            }
-            else
-            {
-                var newHighScore = new HighScore 
-                {
-                    PlayerId = existingPlayer.Id,
-                    GameId = existingGame.Id,
-                    Score = request.Score
-                };
-                await _highscoreRepository.AddAsync(newHighScore);
-            }
-            var Success = new OperationResult(200, true, "Score registered successfully");
-            Success.SetData(new ScoreDTO(existingPlayer.Username, existingGame.Name, existingGame.Developer, request.Score));
-            return Success;
+            return new OperationResult(400, false, "Failed to insert the new score, check the fields and try again.");
         }
-        catch (Exception ex)
+
+        var existingGame = await _gameRepository.FindByNameAsync(request.Game, request.DeveloperGame);
+        if (existingGame == null)
         {
-            return new OperationResult(500, false, $"An internal error occurred. Please try again later. details: {ex.Message}");
+            return new OperationResult(400, false, "Game not exists.");
+        }
+
+        var player = await EnsurePlayerExists(request.Username);
+        await EnsureHighScoreExistsOrUpdate(existingGame.Id, player.Id, request.Score);
+
+        var result = new OperationResult(200, true, "Score registered successfully");
+        result.SetData(new ScoreDTO(player.Username, existingGame.Name, existingGame.Developer, request.Score));
+        return result;
+    }
+
+    private async Task<Player> EnsurePlayerExists(string username)
+    {
+        var existingPlayer = await _playerRepository.FindByUsernameAsync(username);
+        if (existingPlayer == null)
+        {
+            var newPlayer = new Player { Username = username };
+            await _playerRepository.AddAsync(newPlayer);
+            return newPlayer;
+        }
+        return existingPlayer;
+    }
+
+    private async Task EnsureHighScoreExistsOrUpdate(int gameId, int playerId, double score)
+    {
+        var existingHighScore = await _highscoreRepository.GetHighscoreByPlayerToGameAsync(gameId, playerId);
+        if (existingHighScore != null)
+        {
+            existingHighScore.Score = score;
+            await _highscoreRepository.UpdateAsync(existingHighScore);
+        }
+        else
+        {
+            var newHighScore = new HighScore
+            {
+                PlayerId = playerId,
+                GameId = gameId,
+                Score = score
+            };
+            await _highscoreRepository.AddAsync(newHighScore);
         }
     }
 }

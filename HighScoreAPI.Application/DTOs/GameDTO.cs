@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HighScoreAPI.Application.DTOs;
+
 public class GameDTO
 {
     public GameDTO(int id, string name, string type, string developer)

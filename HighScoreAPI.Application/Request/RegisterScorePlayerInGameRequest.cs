@@ -13,5 +13,6 @@ public class RegisterScorePlayerInGameRequest
     public string Game { get; set; }
 
     public string DeveloperGame { get; set; }
+
     public double Score { get; set; }
 }

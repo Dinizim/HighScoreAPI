@@ -25,7 +25,7 @@ public class GetPlayerHighScoreByGameUseCase
     {
         try
         {
-            var validationResponse = await Validation_Existing(request);
+            var validationResponse = await ValidationExisting(request);
             if (!validationResponse.Success)
             {
                 return validationResponse;
@@ -57,7 +57,7 @@ public class GetPlayerHighScoreByGameUseCase
         }
     }
 
-    private async Task<OperationResult> Validation_Existing(GetPlayerHighScoreByGameRequest request)
+    private async Task<OperationResult> ValidationExisting(GetPlayerHighScoreByGameRequest request)
     {
         var existingGame = await _gameRepository.FindByNameAsync(request.Game, request.Developer);
         if (existingGame == null)
